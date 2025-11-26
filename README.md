@@ -1,10 +1,10 @@
-# Weather Conditions and Online Mood In Türkiye DSA210-Project
+# Weather Conditions and Online Mood In Istanbul DSA210-Project
 # Project Overview
-This project investigates how weather conditions influence collective mood and online behavior in Türkiye. Using meteorological data from OpenWeather and Google Trends search frequencies for emotion- and activity-related keywords, the study aims to identify correlations between environmental factors and public emotional patterns. Through data preprocessing, visualization, and statistical analysis, it seeks to reveal how variations in temperature, sunlight, and precipitation correspond with changes in well-being and digital engagement across Türkiye.
+This project investigates how weather conditions influence collective mood and online behavior in Istanbul. Using meteorological data from OpenWeather and Google Trends search frequencies for emotion- and activity-related keywords, the study aims to identify correlations between environmental factors and public emotional patterns. Through data preprocessing, visualization, and statistical analysis, it seeks to reveal how variations in temperature, sunlight, and precipitation correspond with changes in well-being and digital engagement across Istanbul.
 # Objectives
 **Understand Environmental Influences on Mood:**
 
-Examine how key weather variables — including temperature, sunlight hours, and precipitation — correspond with shifts in online mood indicators across Türkiye.
+Examine how key weather variables — including temperature, sunlight hours, and precipitation — correspond with shifts in online mood indicators across Istanbul.
 
 **Analyze Online Behavioral Patterns:**
 
