@@ -115,4 +115,60 @@ Chi-square tests for categorical weather conditions (rainy/non-rainy) vs high/lo
 One-way ANOVA to examine whether mood indices differ under different temperature groups
 
 These tests evaluate whether observed relationships are statistically significant.
+# Machine Learning Analysis
+
+In addition to statistical hypothesis testing, simple machine learning models were applied to further investigate whether weather variables contain predictive signal for online mood and behavior indices. The purpose of this analysis is not to achieve high predictive accuracy, but to examine whether non-linear modeling approaches can capture patterns that may not be visible through traditional statistical methods.
+
+To avoid information leakage and preserve temporal structure, all models were evaluated using time-series cross-validation.
+
+---
+
+## Models Implemented
+
+The following regression models were trained and evaluated:
+
+- **K-Nearest Neighbors (KNN) Regressor**
+- **Decision Tree Regressor**
+- **Random Forest Regressor**
+
+The target variable selected for prediction was **PositiveMoodIndex**, representing aggregated positive emotional search behavior. The input features consisted of key weather-related variables, including:
+
+- Average weekly temperature (tavg)
+- Weekly precipitation (prcp)
+- Weekly temperature range
+- Wind speed
+- Atmospheric pressure
+
+Hyperparameters for each model were tuned using cross-validation to ensure fair comparison.
+
+---
+
+## Evaluation Metrics
+
+Model performance was assessed using the following metrics:
+
+- **Root Mean Squared Error (RMSE)** to measure prediction error magnitude
+- **Mean Absolute Error (MAE)** for robustness to outliers
+- **R² Score** to evaluate explanatory power relative to a baseline mean predictor
+
+Negative R² values indicate that the model performs worse than predicting the average value of the target variable.
+
+---
+
+## Results and Interpretation
+
+Across all machine learning models, predictive performance remained weak. RMSE values were relatively high compared to the scale of the target variable, and R² scores were negative for all models. This suggests that weather-based features alone are insufficient to accurately predict variations in online mood indices.
+
+Among the tested models, Random Forest and Decision Tree regressors marginally outperformed KNN, though the differences were small and not practically significant. Feature importance analysis from tree-based models indicates that average temperature and precipitation contribute more to predictions than other weather variables, but their overall explanatory power remains limited.
+
+These findings align closely with earlier statistical analyses, which also revealed weak and inconsistent relationships between weather conditions and mood or behavior indices.
+
+---
+
+## Conclusion from Machine Learning Analysis
+
+The machine learning results reinforce the conclusion that short-term weather conditions do not provide strong predictive signal for collective online mood or behavior. While minor associations exist, mood-related search behavior appears to be influenced by a broader set of psychological, social, and contextual factors beyond meteorological variables.
+
+Overall, machine learning models confirm that weather-based prediction of online mood is limited in this dataset and should be interpreted as exploratory rather than causal.
+
 
